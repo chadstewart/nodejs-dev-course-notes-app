@@ -1,15 +1,48 @@
 const getNotes = require('./notes.js');
+const yargs = require('yargs');
 const chalk = require('chalk');
-//const validator = require('validator');
+const { command } = require('yargs');
 
-const command = process.argv[2];
+// Customize yargs version
 
-if(command === 'add') {
+yargs.version('1.1.0');
 
-    console.log('Adding note!');
+//Create add command
+yargs.command({
+    command: 'add',
+    describe: 'Add a new note',
+    handler: () => {
+        console.log('Adding a new note!');
+    }
+})
 
-} else if (command === 'remove') {
+//Create remove command
+yargs.command({
+    command: 'remove',
+    describe: 'Remove a note',
+    handler: () => {
+        console.log('Removing a note!');
+    }
+})
 
-    console.log('Removing note!');
+//Create list command
+yargs.command({
+    command: 'list',
+    describe: 'Lists all available notes!',
+    handler: () => {
+        console.log('Listing all notes!');
+    }
+})
 
-}
+//Create read command
+yargs.command({
+    command: 'read',
+    describe: 'Reads a note!',
+    handler: () => {
+        console.log('Reading a note!');
+    }
+})
+
+console.log(yargs.argv);
+
+//add, remove, read, list
