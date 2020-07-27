@@ -1,4 +1,4 @@
-# Project Title
+# Chad Stewart's Work on The Complete Node.js Developer Course
 
 This is my work I've done while following along with Andrew Mead's Udemy Course: The Complete Node.js Developer Tutorial 3rd Edition. This repo will serve as the repo for the entire course. If I make anything based off of the work I've done with this course, I will create another repo for it.
 
